@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>張家愷 | Kai's Space</title>
+    <style>
+        :root {
+            --bg-dark: #121212;
+            --card-bg: #1e1e1e;
+            --accent: #9ca3af; /* 灰銀色，象徵冷靜 */
+            --highlight: #ffffff;
+            --text-dim: #a1a1aa;
+        }
+
+        body {
+            font-family: 'Inter', "PingFang TC", "Microsoft JhengHei", sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--highlight);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            letter-spacing: 0.05em;
+        }
+
+        .main-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 2px; /* 俐落的直角感 */
+            border-left: 4px solid var(--accent);
+            max-width: 450px;
+            width: 90%;
+            box-shadow: 20px 20px 60px #080808;
+        }
+
+        .header {
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 0;
+            font-weight: 300;
+            letter-spacing: 5px;
+        }
+
+        .school-tag {
+            font-size: 0.8rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            margin-top: 5px;
+            display: block;
+        }
+
+        .bio-section {
+            margin-bottom: 25px;
+        }
+
+        .label {
+            color: var(--text-dim);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .value {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .interest-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .tag {
+            font-size: 0.85rem;
+            border: 1px solid #333;
+            padding: 6px 14px;
+            border-radius: 0px;
+            transition: all 0.4s;
+            background: transparent;
+            color: var(--text-dim);
+        }
+
+        .tag:hover {
+            border-color: var(--highlight);
+            color: var(--highlight);
+            background: #252525;
+        }
+
+        .footer-quote {
+            margin-top: 40px;
+            font-size: 0.75rem;
+            color: #444;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: right;
+        }
+
+        /* 簡單的進場動畫 */
+        .main-card {
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-card">
+        <div class="header">
+            <h1>張家愷</h1>
+            <span class="school-tag">National Quemoy University</span>
+        </div>
+
+        <div class="bio-section">
+            <span class="label">Profile</span>
+            <div class="value">女 / 04.26 / 安靜</div>
+        </div>
+
+        <div class="bio-section">
+            <span class="label">Interests</span>
+            <div class="interest-box">
+                <div class="tag">畫圖</div>
+                <div class="tag">數獨</div>
+                <div class="tag">西洋棋</div>
+                <div class="tag">籃球</div>
+                <div class="tag">射擊遊戲</div>
+                <div class="tag">西海岸饒舌</div>
+            </div>
+        </div>
+
+        <div class="footer-quote">
+            "Silence is the ultimate weapon."
+        </div>
+    </div>
+
+</body>
+</html>
