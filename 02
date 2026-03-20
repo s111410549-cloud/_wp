@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原神玩家成分大調查</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Arial, "Microsoft JhengHei", sans-serif;
+            background-color: #f4f7f9;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 { color: #3b4255; text-align: center; border-bottom: 2px solid #eceff1; padding-bottom: 10px; }
+        .section { margin-bottom: 25px; padding: 15px; border-left: 5px solid #4a90e2; background: #fafafa; }
+        .section h3 { margin-top: 0; color: #4a90e2; }
+        label { display: block; margin: 10px 0 5px; font-weight: bold; }
+        .hint { font-size: 0.85em; color: #666; font-weight: normal; }
+        input[type="text"], select, textarea { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+        .radio-group, .checkbox-group { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 5px; }
+        .btn-submit { background: #4a90e2; color: white; border: none; padding: 12px 20px; width: 100%; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 20px; }
+        .btn-submit:hover { background: #357abd; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>✨ 原神玩家成分調查 ✨</h1>
+    <form>
+        <div class="section">
+            <h3>🎵 音遊 (Rhythm Game)</h3>
+            <label>活動難度接受度：</label>
+            <input type="range" min="1" max="5" step="1" list="tickmarks">
+            <datalist id="tickmarks">
+                <option value="1" label="簡單">
+                <option value="2">
+                <option value="3" label="適中">
+                <option value="4">
+                <option value="5" label="大師">
+            </datalist>
+            <div class="hint">左(休閒) 到 右(我要打最高難度)</div>
+        </div>
+
+        <div class="section">
+            <h3>🃏 七聖召喚 (TCG)</h3>
+            <label>你的牌位/活躍度：</label>
+            <select>
+                <option value="none">完全不碰 (領完原石就跑)</option>
+                <option value="casual">偶爾跟路邊 NPC 玩</option>
+                <option value="pvp">熱衷於聯機對戰</option>
+                <option value="master">每週清空酒館挑戰</option>
+            </select>
+        </div>
+
+        <div class="section">
+            <h3>🏠 塵歌壺 (Housing)</h3>
+            <label>修仙建築師等級：</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox"> 負載監獄受害者</label>
+                <label><input type="checkbox"> 浮空/穿模大師</label>
+                <label><input type="checkbox"> 複製碼搬運工</label>
+                <label><input type="checkbox"> 種田專業戶</label>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>🍳 煮飯 (Cooking)</h3>
+            <label>你對料理的堅持：</label>
+            <div class="radio-group">
+                <label><input type="radio" name="cook" value="perfect"> 必須全部完美烹飪</label>
+                <label><input type="radio" name="cook" value="special"> 追求特殊料理(簽名檔)</label>
+                <label><input type="radio" name="cook" value="lazy"> 甜甜花釀雞戰士</label>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>⚔️ 強度黨 (Meta)</h3>
+            <label>深境螺旋追求：</label>
+            <select>
+                <option value="36">穩定 36 星</option>
+                <option value="speed">追求競速 (Speedrun)</option>
+                <option value="single">單通/少人挑戰</option>
+                <option value="chill">打過就好，隨緣拿星</option>
+            </select>
+            <label>角色命座計畫：</label>
+            <input type="text" placeholder="例如：2+1, 6+5...">
+        </div>
+
+        <div class="section">
+            <h3>📸 攝影師 (Photography)</h3>
+            <label>最喜歡拍的照片類型：</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox"> 風景大片</label>
+                <label><input type="checkbox"> 技能特效捕捉</label>
+                <label><input type="checkbox"> 角色表情包</label>
+                <label><input type="checkbox"> 同人劇情模擬</label>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>❤️ XP 黨 (Fave Characters)</h3>
+            <label>你的「真愛角色」是？</label>
+            <input type="text" placeholder="請輸入角色名稱...">
+            <label>抽卡動力來源：</label>
+            <div class="radio-group">
+                <label><input type="radio" name="xp" value="look"> 顏值/立繪</label>
+                <label><input type="radio" name="xp" value="voice"> 聲優/語音</label>
+                <label><input type="radio" name="xp" value="lore"> 故事/人設</label>
+            </div>
+        </div>
+
+        <button type="submit" class="btn-submit">提交我的玩家檔案</button>
+    </form>
+</div>
+
+</body>
+</html>
