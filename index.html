@@ -3,67 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的書籤導航</title>
+    <title>我的部落格</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>我的書籤導航</h1>
-            <p class="subtitle">快速存取常用網站</p>
+            <h1>我的部落格</h1>
+            <p class="subtitle">分享想法與故事</p>
         </header>
 
         <main>
-            <section class="category">
-                <h2>常用工具</h2>
-                <div class="links">
-                    <a href="https://www.google.com" target="_blank" class="link-card">
-                        <span class="icon">🔍</span>
-                        <span class="name">Google</span>
-                    </a>
-                    <a href="https://github.com" target="_blank" class="link-card">
-                        <span class="icon">💻</span>
-                        <span class="name">GitHub</span>
-                    </a>
-                    <a href="https://www.youtube.com" target="_blank" class="link-card">
-                        <span class="icon">📺</span>
-                        <span class="name">YouTube</span>
-                    </a>
-                </div>
+            <section class="post-form">
+                <h2>發布新文章</h2>
+                <form id="postForm">
+                    <input type="text" id="titleInput" placeholder="標題" required>
+                    <textarea id="contentInput" placeholder="寫下你的想法..." required></textarea>
+                    <button type="submit">發布</button>
+                </form>
             </section>
 
-            <section class="category">
-                <h2>社群媒體</h2>
-                <div class="links">
-                    <a href="https://www.facebook.com" target="_blank" class="link-card">
-                        <span class="icon">📘</span>
-                        <span class="name">Facebook</span>
-                    </a>
-                    <a href="https://www.instagram.com" target="_blank" class="link-card">
-                        <span class="icon">📸</span>
-                        <span class="name">Instagram</span>
-                    </a>
-                </div>
-            </section>
-
-            <section class="category">
-                <h2>學習資源</h2>
-                <div class="links">
-                    <a href="https://www.wikipedia.org" target="_blank" class="link-card">
-                        <span class="icon">📚</span>
-                        <span class="name">Wikipedia</span>
-                    </a>
-                    <a href="https://www.coursera.org" target="_blank" class="link-card">
-                        <span class="icon">🎓</span>
-                        <span class="name">Coursera</span>
-                    </a>
-                </div>
+            <section class="posts">
+                <h2>文章列表</h2>
+                <div id="postsContainer"></div>
             </section>
         </main>
 
         <footer>
-            <p>© 2026 我的書籤導航</p>
+            <p>© 2026 我的部落格</p>
         </footer>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
