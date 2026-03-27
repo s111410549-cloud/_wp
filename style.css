@@ -102,10 +102,31 @@ main section h2 {
     animation: fadeIn 0.3s ease;
 }
 
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
 .post-item h3 {
     color: #333;
-    margin-bottom: 10px;
     font-size: 1.2rem;
+}
+
+.delete-btn {
+    padding: 5px 12px;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.delete-btn:hover {
+    background: #ee5253;
 }
 
 .post-item p {

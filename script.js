@@ -18,7 +18,10 @@ document.getElementById('postForm').addEventListener('submit', function(e) {
     const postDiv = document.createElement('div');
     postDiv.className = 'post-item';
     postDiv.innerHTML = `
-        <h3>${escapeHtml(title)}</h3>
+        <div class="post-header">
+            <h3>${escapeHtml(title)}</h3>
+            <button class="delete-btn" onclick="deletePost(this)">刪除</button>
+        </div>
         <p>${escapeHtml(content)}</p>
         <div class="time">${timeString}</div>
     `;
@@ -33,4 +36,14 @@ function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
+}
+
+function deletePost(btn) {
+    const postItem = btn.closest('.post-item');
+    postItem.remove();
+    
+    const postsContainer = document.getElementById('postsContainer');
+    if (postsContainer.children.length === 0) {
+        postsContainer.innerHTML = '<p class="empty-message">尚無文章</p>';
+    }
 }
